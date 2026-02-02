@@ -71,15 +71,26 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigateToProjects }) => {
             <div className="lg:w-2/3 max-w-4xl">
               {/* Subheading */}
               <h3 className="text-white font-poppins text-2xl md:text-3xl lg:text-4xl font-normal tracking-wider uppercase leading-relaxed mb-8">
-                we are a digital production team.
+                Computer Science Student & Full-Stack Developer
               </h3>
 
               {/* Main Description */}
               <div className="mb-16">
-                <p className="text-white font-poppins text-lg md:text-2xl lg:text-3xl font-normal tracking-wider uppercase leading-relaxed mb-16">
-                  shubham is a leading design & software development agency <br className="hidden lg:block" />
-                  based in berlin. We help startups & Fortune 500 companies <br className="hidden lg:block" />
-                  delight humans on the other side of the screen.
+                <p className="text-white font-poppins text-lg md:text-xl lg:text-2xl font-normal tracking-wide leading-relaxed mb-8">
+                  I'm a B.Tech student at <span className="text-sugar-orange">Indira Institute of Information Technology, Sonepat</span>, 
+                  passionate about creating innovative solutions at the intersection of AI/ML, Full-Stack Development, and Web3.
+                </p>
+                
+                <p className="text-gray-300 font-poppins text-base md:text-lg leading-relaxed mb-8">
+                  With a strong foundation in computer vision, multimodal AI, and modern web technologies, 
+                  I specialize in building scalable applications that solve real-world problems. My work spans 
+                  from developing assistive technologies for the visually impaired to creating enterprise-level 
+                  SaaS platforms.
+                </p>
+
+                <p className="text-gray-300 font-poppins text-base md:text-lg leading-relaxed mb-16">
+                  I believe in the power of technology to create meaningful impact, combining technical excellence 
+                  with user-centric design to build products that truly matter.
                 </p>
                 
                 {/* Orange accent rectangle */}
@@ -92,7 +103,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigateToProjects }) => {
                   <div className="w-14 h-8 bg-sugar-orange"></div>
                 </div>
                 <button className="text-white font-open-sans text-xl md:text-2xl font-normal tracking-wider capitalize hover:text-sugar-orange transition-colors">
-                  Contact us
+                  Get in touch
                 </button>
               </div>
 
@@ -100,35 +111,58 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigateToProjects }) => {
               <div className="space-y-16 mb-32">
                 <div>
                   <h4 className="text-white font-poppins text-2xl font-normal tracking-wider uppercase mb-4">
-                    Our Mission
+                    Achievements
                   </h4>
-                  <p className="text-gray-300 font-poppins text-lg leading-relaxed">
-                    To create digital experiences that not only look beautiful but also solve real problems and drive meaningful results for our clients.
-                  </p>
+                  <div className="space-y-3">
+                    <p className="text-gray-300 font-poppins text-base leading-relaxed">
+                      <span className="text-sugar-orange">•</span> Winner, Infinity CAH Hackathon at IIT Delhi (2025)
+                    </p>
+                    <p className="text-gray-300 font-poppins text-base leading-relaxed">
+                      <span className="text-sugar-orange">•</span> 5x National Hackathon Winner (2025)
+                    </p>
+                    <p className="text-gray-300 font-poppins text-base leading-relaxed">
+                      <span className="text-sugar-orange">•</span> JEE Main Rank: 12,000 among 1.4 million+ candidates (2024)
+                    </p>
+                    <p className="text-gray-300 font-poppins text-base leading-relaxed">
+                      <span className="text-sugar-orange">•</span> BITSAT Score: 292/390 (2024)
+                    </p>
+                    <p className="text-gray-300 font-poppins text-base leading-relaxed">
+                      <span className="text-sugar-orange">•</span> 95% Gold Medal & Blue Blazer for consecutive academic excellence
+                    </p>
+                  </div>
                 </div>
 
                 <div>
                   <h4 className="text-white font-poppins text-2xl font-normal tracking-wider uppercase mb-4">
-                    Our Vision
-                  </h4>
-                  <p className="text-gray-300 font-poppins text-lg leading-relaxed">
-                    To be the most trusted partner for companies looking to transform their digital presence and create lasting impact in their industry.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-white font-poppins text-2xl font-normal tracking-wider uppercase mb-4">
-                    Our Values
+                    Education
                   </h4>
                   <div className="space-y-4">
-                    <p className="text-gray-300 font-poppins text-lg leading-relaxed">
-                      <span className="text-sugar-orange font-semibold">Innovation:</span> We constantly push boundaries to deliver cutting-edge solutions.
+                    <div>
+                      <p className="text-white font-poppins text-lg font-semibold">B.Tech in Computer Science</p>
+                      <p className="text-gray-300 font-poppins text-base">Indira Institute of Information Technology, Sonepat</p>
+                      <p className="text-sugar-orange font-poppins text-sm">CGPA: 8.4/10.0 • 2024-2028</p>
+                    </div>
+                    <div>
+                      <p className="text-white font-poppins text-lg font-semibold">Class 12 (CBSE)</p>
+                      <p className="text-gray-300 font-poppins text-base">Delhi Public School, Ghaziabad</p>
+                      <p className="text-sugar-orange font-poppins text-sm">90% • 2020-2024</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-white font-poppins text-2xl font-normal tracking-wider uppercase mb-4">
+                    Core Competencies
+                  </h4>
+                  <div className="space-y-4">
+                    <p className="text-gray-300 font-poppins text-base leading-relaxed">
+                      <span className="text-sugar-orange font-semibold">AI/ML:</span> Computer Vision, Multimodal AI, Natural Language Processing, Open-Source LLMs
                     </p>
-                    <p className="text-gray-300 font-poppins text-lg leading-relaxed">
-                      <span className="text-sugar-orange font-semibold">Quality:</span> Every project is crafted with meticulous attention to detail.
+                    <p className="text-gray-300 font-poppins text-base leading-relaxed">
+                      <span className="text-sugar-orange font-semibold">Full-Stack:</span> MERN Stack, Next.js, TypeScript, REST APIs, System Architecture
                     </p>
-                    <p className="text-gray-300 font-poppins text-lg leading-relaxed">
-                      <span className="text-sugar-orange font-semibold">Collaboration:</span> We work closely with our clients as partners, not just vendors.
+                    <p className="text-gray-300 font-poppins text-base leading-relaxed">
+                      <span className="text-sugar-orange font-semibold">DevOps & Tools:</span> Git, Docker, AWS, CI/CD, Agile Methodologies
                     </p>
                   </div>
                 </div>

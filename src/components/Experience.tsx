@@ -11,36 +11,67 @@ interface ExperienceProps {
 const Experience: React.FC<ExperienceProps> = ({ onNavigateToProjects }) => {
   const experienceItems = [
     {
-      title: "Intern - Google Summer of Code",
-      period: "June 2025 – September 2025",
-      description: "Project: lego bricks musical notations for the visually challenged."
+      title: "Research Consultant",
+      company: "WorldQuant",
+      period: "Jan 2026 – Present (2 months)",
+      type: "Part-time",
+      location: "Remote",
+      description: "Contributing to quantitative research and data analysis projects, applying advanced statistical methodologies and machine learning techniques."
     },
     {
-      title: "Intern - Dualite",
-      period: "Full Stack Development, August 2025 - Present",
-      description: "Working on full stack development projects with modern technologies and frameworks."
+      title: "Co-Founder",
+      company: "gemnar",
+      period: "Sep 2025 – Present (6 months)",
+      type: "Full-time",
+      location: "Remote",
+      description: "Founded and co-leading a FGC-AI advertisement generation platform enabling brands to create high-quality, conversational video ads using generative AI and open-source models."
     },
     {
-      title: "SugarLabs",
-      period: "Website Maintainer and Member, May 2025 – Present",
-      description: "Built www.sugarlabs.org and currently maintainer for the same"
+      title: "Technical Lead",
+      company: "AlgoZenith IIIT Sonepat",
+      period: "Aug 2025 – Present (7 months)",
+      type: "Part-time",
+      location: "On-site",
+      description: "Leading technical initiatives in competitive programming and development, mentoring students and organizing coding competitions and workshops."
     },
     {
-      title: "AlgoZenith Tech Lead",
-      period: "August 2025 – Present",
-      description: "Leading technical initiatives and mentoring team members in competitive programming and development."
+      title: "Member - Website Development Lead",
+      company: "Sugar Labs",
+      period: "Mar 2025 – Present (1 year)",
+      type: "Part-time",
+      location: "India • Remote",
+      description: "Lead for development of www-v2, building and maintaining the organization's web presence and contributing to open-source educational software."
     },
     {
-      title: "GDSC Core Team Member",
-      period: "October 2024 - Present",
-      description: "Contributing to Google Developer Student Club initiatives and organizing tech events."
+      title: "Core Team Member",
+      company: "GDSC IIIT Sonepat",
+      period: "Jan 2025 – Present (1 year 2 months)",
+      type: "Full-time",
+      location: "Haryana, India • Hybrid",
+      description: "Core Team member at GDSC - IIIT Sonepat, organizing tech events, workshops, and contributing to community building initiatives."
+    },
+    {
+      title: "Full Stack Development Intern",
+      company: "Dualite",
+      period: "Jul 2025 – Nov 2025 (5 months)",
+      type: "Internship",
+      location: "Remote",
+      description: "Developed and deployed 100+ creative websites, authored detailed tutorials and documentation, and assisted in onboarding new developers."
+    },
+    {
+      title: "Google Summer of Code Intern",
+      company: "Sugar Labs",
+      period: "May 2025 – Sep 2025 (5 months)",
+      type: "Full-time",
+      location: "India • Remote",
+      description: "Built Color Sensor for SugarLabs' Music Blocks project - an assistive computer vision-based educational system enabling visually impaired children to learn music using tactile Lego Blocks."
     }
   ];
 
   return (
     <div className="min-h-screen relative overflow-auto" style={{ backgroundColor: '#000000' }}>
       {/* Background blur effect */}
-      <div 
+      <div
         className="fixed opacity-90 rounded-full pointer-events-none"
         style={{
           width: '1527px',
@@ -51,7 +82,7 @@ const Experience: React.FC<ExperienceProps> = ({ onNavigateToProjects }) => {
           filter: 'blur(392px)',
         }}
       ></div>
-      
+
       {/* Header */}
       <Header />
 
@@ -67,10 +98,10 @@ const Experience: React.FC<ExperienceProps> = ({ onNavigateToProjects }) => {
 
         {/* Content container with proper spacing */}
         <div className="pt-32 pb-32 px-4 md:px-8 lg:px-24">
-          
+
           {/* Large decorative "S" */}
           <div className="absolute left-64 top-40 pointer-events-none">
-            <span 
+            <span
               className="font-poppins font-normal text-black lowercase leading-tight"
               style={{
                 fontSize: 'clamp(200px, 25vw, 454px)',
@@ -84,13 +115,13 @@ const Experience: React.FC<ExperienceProps> = ({ onNavigateToProjects }) => {
 
           {/* Main content area */}
           <div className="flex flex-col lg:flex-row gap-16 mt-32">
-            
+
             {/* Left content */}
             <div className="lg:w-1/3 lg:ml-48">
               <h2 className="text-white font-poppins text-4xl font-normal tracking-wide uppercase leading-relaxed mb-6">
                 experience
               </h2>
-              
+
               {/* Decorative line */}
               <div className="w-16 h-0.5 bg-sugar-orange mb-8"></div>
             </div>
@@ -99,7 +130,7 @@ const Experience: React.FC<ExperienceProps> = ({ onNavigateToProjects }) => {
             <div className="lg:w-2/3 max-w-6xl">
               {/* Large cre8tive text */}
               <div className="mb-16">
-                <h3 
+                <h3
                   className="text-white font-poppins font-bold uppercase leading-tight mb-16"
                   style={{
                     fontSize: 'clamp(80px, 12vw, 180px)',
@@ -122,9 +153,16 @@ const Experience: React.FC<ExperienceProps> = ({ onNavigateToProjects }) => {
                       <h4 className="text-white font-poppins text-2xl md:text-3xl font-normal tracking-wide leading-relaxed">
                         {item.title}
                       </h4>
-                      <p className="text-sugar-orange font-poppins text-base font-medium tracking-wide leading-relaxed">
-                        {item.period}
+                      <p className="text-sugar-orange font-poppins text-lg font-medium tracking-wide leading-relaxed">
+                        {item.company}
                       </p>
+                      <div className="flex flex-wrap gap-3 text-gray-400 font-poppins text-sm">
+                        <span>{item.period}</span>
+                        <span>•</span>
+                        <span>{item.type}</span>
+                        <span>•</span>
+                        <span>{item.location}</span>
+                      </div>
                       <p className="text-gray-300 font-poppins text-base font-normal tracking-wide leading-relaxed">
                         {item.description}
                       </p>

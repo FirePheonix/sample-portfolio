@@ -14,18 +14,18 @@ function App() {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [showMain, setShowMain] = useState(false);
   const [currentSection, setCurrentSection] = useState<'home' | 'about' | 'experience' | 'projects'>('home');
-  const services1 = [ 'ui/ux', 'mern', 'full-stack', 'web3', 'ml','research'];
-  const services2 = ['ui/ux', 'mern', 'full-stack', 'web3', 'ml', 'research'];
+  const services1 = ['AI/ML', 'Full-Stack', 'UI/UX', 'Web3', 'Research', 'Development'];
+  const services2 = ['Computer Vision', 'MERN Stack', 'Next.js', 'LLMs', 'System Design', 'DevOps'];
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
     setIsTransitioning(true);
-    
+
     // Start the transition sequence
     setTimeout(() => {
       setShowMain(true);
     }, 1000); // Black screen duration
-    
+
     setTimeout(() => {
       setIsTransitioning(false);
     }, 2500); // Total transition duration
@@ -47,7 +47,7 @@ function App() {
           <div className="animate-fade-in-up">
             {/* Animated "s" letter that scales in */}
             <div className="relative flex items-center justify-center animate-scale-in">
-              <span 
+              <span
                 className="font-poppins font-normal text-white lowercase leading-tight animate-glow"
                 style={{
                   fontSize: 'clamp(150px, 20vw, 300px)',
@@ -57,10 +57,10 @@ function App() {
                 s
               </span>
             </div>
-            
+
             {/* "shubham" text that fades in */}
             <div className="text-center mt-8 animate-fade-in-delayed">
-              <span 
+              <span
                 className="font-poppins font-normal text-white lowercase leading-tight"
                 style={{
                   fontSize: 'clamp(30px, 4vw, 50px)',
@@ -88,19 +88,19 @@ function App() {
         <AboutUs onNavigateToProjects={navigateToProjects} />
         {/* Navigation buttons */}
         <div className="fixed top-4 left-4 z-50 flex gap-4">
-          <button 
+          <button
             onClick={() => setCurrentSection('home')}
             className="bg-sugar-orange text-white px-4 py-2 rounded-full font-poppins text-sm uppercase tracking-wider hover:bg-orange-600 transition-colors"
           >
             ← Home
           </button>
-          <button 
+          <button
             onClick={() => setCurrentSection('experience')}
             className="bg-white text-black px-4 py-2 rounded-full font-poppins text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors"
           >
             Experience
           </button>
-          <button 
+          <button
             onClick={() => setCurrentSection('projects')}
             className="bg-white text-black px-4 py-2 rounded-full font-poppins text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors"
           >
@@ -117,19 +117,19 @@ function App() {
         <Experience onNavigateToProjects={navigateToProjects} />
         {/* Navigation buttons */}
         <div className="fixed top-4 left-4 z-50 flex gap-4">
-          <button 
+          <button
             onClick={() => setCurrentSection('home')}
             className="bg-sugar-orange text-white px-4 py-2 rounded-full font-poppins text-sm uppercase tracking-wider hover:bg-orange-600 transition-colors"
           >
             ← Home
           </button>
-          <button 
+          <button
             onClick={() => setCurrentSection('about')}
             className="bg-white text-black px-4 py-2 rounded-full font-poppins text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors"
           >
             About Me
           </button>
-          <button 
+          <button
             onClick={() => setCurrentSection('projects')}
             className="bg-white text-black px-4 py-2 rounded-full font-poppins text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors"
           >
@@ -146,19 +146,19 @@ function App() {
         <Projects onNavigateToProjects={navigateToProjects} />
         {/* Navigation buttons */}
         <div className="fixed top-4 left-4 z-50 flex gap-4">
-          <button 
+          <button
             onClick={() => setCurrentSection('home')}
             className="bg-sugar-orange text-white px-4 py-2 rounded-full font-poppins text-sm uppercase tracking-wider hover:bg-orange-600 transition-colors"
           >
             ← Home
           </button>
-          <button 
+          <button
             onClick={() => setCurrentSection('about')}
             className="bg-white text-black px-4 py-2 rounded-full font-poppins text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors"
           >
             About Me
           </button>
-          <button 
+          <button
             onClick={() => setCurrentSection('experience')}
             className="bg-white text-black px-4 py-2 rounded-full font-poppins text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors"
           >
@@ -173,7 +173,7 @@ function App() {
     <div className={`min-h-screen overflow-hidden relative ${!isTransitioning ? 'animate-main-page' : ''}`} style={{ backgroundColor: '#000000' }}>
       {/* Background blur effect */}
       <div className="absolute top-48 left-32 w-96 h-96 bg-gray-900 rounded-full opacity-90 blur-[200px]"></div>
-      
+
       {/* Header with modified navigation */}
       <div className="relative z-50 w-full px-4 md:px-8 lg:px-24 py-8 animate-element-stagger" style={{ animationDelay: '0.2s' }}>
         <div className="flex items-center justify-between w-full">
@@ -192,19 +192,19 @@ function App() {
               </div>
             </div>
             {/* Navigation links */}
-            <button 
+            <button
               onClick={() => setCurrentSection('about')}
               className="text-white font-poppins text-sm tracking-widest uppercase hover:text-sugar-orange transition-colors"
             >
               About Me
             </button>
-            <button 
+            <button
               onClick={() => setCurrentSection('experience')}
               className="text-white font-poppins text-sm tracking-widest uppercase hover:text-sugar-orange transition-colors"
             >
               Experience
             </button>
-            <button 
+            <button
               onClick={() => setCurrentSection('projects')}
               className="text-white font-poppins text-sm tracking-widest uppercase hover:text-sugar-orange transition-colors"
             >
@@ -263,15 +263,15 @@ function App() {
         {/* Scrolling Strips */}
         <section className="relative -mx-4 md:-mx-8 lg:-mx-24 animate-element-stagger" style={{ animationDelay: '0.6s' }}>
           {/* First strip - Light background, scrolling left */}
-          <ScrollingStrip 
+          <ScrollingStrip
             items={services1}
             direction="left"
             background="light"
             className="py-6 md:py-8 mb-4"
           />
-          
+
           {/* Second strip - Dark background, scrolling right */}
-          <ScrollingStrip 
+          <ScrollingStrip
             items={services2}
             direction="right"
             background="dark"

@@ -3,49 +3,18 @@ import Header from './Header';
 import TagsList from './TagsList';
 import Logo from './Logo';
 import WatchVideoButton from './WatchVideoButton';
+import { projectsData } from '../data/projects';
 
 interface ProjectsProps {
   onNavigateToProjects: () => void;
 }
 
 const Projects: React.FC<ProjectsProps> = ({ onNavigateToProjects }) => {
-  const projectsData = [
-    {
-      title: "shubham portfolio",
-      category: "UI/UX",
-      image: "https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/abed/7b9f/8ee20077f2fe29a31c7317aea892a5f1?Expires=1756684800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=RLQiqxxpbRL2kcuNT2Q3rHkarkwK~58aL2WKwvI8D3mLDe80CGNbOEchER00VwmMpo8yELpx2agdH8veRB60a8rZiIEhWyGDjFZcZC~tHy8T1gRAArXBYBrM0B6gZaA~LIKlnTdr9~mXZzfQGT3FSuUfoXsjAUB0ZltoYCSl5yZehYpBsdKlZkj7C1DkZstTWYIMeulYi0OGSaJ67SreN85G0W0E1N0tDtgg05FszwZd5AHGY2ZEs2BiHWo4hIqMQxGm93OepHVsJwHg30fNUeK2ZTRwFY4RhM9W-Q1YMpkRH6G2Brwf4kxlkhEY~ZHM5wamwFJZdDo67Vwfgo8wmA__"
-    },
-    {
-      title: "NFTs Dashboard",
-      category: "UI/UX",
-      image: "https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/9a10/6a0f/525cf4e36d11b8787968406ebce12d55?Expires=1756684800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=NZtHTq1t0q74BVApzWwv6DRhl7186ghXMlXdSiLN0FDcNIAVtA9rCYlGZbivkPol~62Fc2gr-w9TeX8dFiwJj0wkAGVCslDxPY6gxwsuPGepM~EWxTQmwXC-Aj9ffk3joneM6qsw29jkhoIo9M4~V1goMhCXVDGxT3ytO-S-yxKKO77W2ST12IrV0QURm5TLPam2~0cLTQIUXlHvzUExcm2wJ-ZTlpCv2lgOeLW2dOTfKqKtFpxJ5XeHq4lDdezMsFGwsDYKt17TEOQgZdSA6O~UChh6b-n6LdKumoGCVsFb1D5zx9g1Hv9AzLd-fWs~JrWb8TGKxiVNiS--9g3tGQ__"
-    },
-    {
-      title: "shubham portfolio",
-      category: "UI/UX",
-      image: "https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/8296/3606/75014f5c1e3c0c29bff3d0423578cec3?Expires=1756684800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=RMdKHGsLEW~SgR8S1LBhEgLNs2VjRJd6nO9Ud2Z1X4AdhnDzWP4ZPsFquKVLtuOR1PDUIhYGshyhDm2yh3BC1evedl0s8WDvlPEaWsJC8A1KdJqjZlL909vGBicXnWXPIAJS4r6lw-hIequ~r1QLNi8aeX2N0skUm9APG0Sg0x~kc33jTz0IO5lF0NcrKKlRcA4v6kSr4vnXC6w~uUTWDX1tf7foTBhJgK1MFBDODfzaeP-oy-OtnlWFCBj0OU1Ejdq7wWXpKIxS8pRy-CegFBtnsVOnEodtEZM7cmb2btO1We7jzQruQq3AOYs9cmtDXK21odsIXyQY3MK0FvuyCQ__"
-    },
-    {
-      title: "E-commerce Platform",
-      category: "UI/UX",
-      image: "https://img-wrapper.vercel.app/image?url=https://placehold.co/400x300/1a1a1a/ffffff?text=E-commerce+Platform"
-    },
-    {
-      title: "Mobile Banking App",
-      category: "UI/UX",
-      image: "https://img-wrapper.vercel.app/image?url=https://placehold.co/400x300/1a1a1a/ffffff?text=Banking+App"
-    },
-    {
-      title: "SaaS Dashboard",
-      category: "UI/UX",
-      image: "https://img-wrapper.vercel.app/image?url=https://placehold.co/400x300/1a1a1a/ffffff?text=SaaS+Dashboard"
-    }
-  ];
 
   return (
     <div className="min-h-screen relative overflow-auto" style={{ backgroundColor: '#000000' }}>
       {/* Background blur effect */}
-      <div 
+      <div
         className="fixed opacity-90 rounded-full pointer-events-none"
         style={{
           width: '1527px',
@@ -56,7 +25,7 @@ const Projects: React.FC<ProjectsProps> = ({ onNavigateToProjects }) => {
           filter: 'blur(392px)',
         }}
       ></div>
-      
+
       {/* Header */}
       <Header />
 
@@ -72,10 +41,10 @@ const Projects: React.FC<ProjectsProps> = ({ onNavigateToProjects }) => {
 
         {/* Content container with proper spacing */}
         <div className="pt-32 pb-32 px-4 md:px-8 lg:px-24">
-          
+
           {/* Large decorative "s" */}
           <div className="absolute left-64 top-40 pointer-events-none">
-            <span 
+            <span
               className="font-poppins font-normal text-black lowercase leading-tight"
               style={{
                 fontSize: 'clamp(200px, 25vw, 454px)',
@@ -89,13 +58,13 @@ const Projects: React.FC<ProjectsProps> = ({ onNavigateToProjects }) => {
 
           {/* Main content area */}
           <div className="flex flex-col lg:flex-row gap-16 mt-32">
-            
+
             {/* Left content */}
             <div className="lg:w-1/3 lg:ml-48">
               <h2 className="text-white font-poppins text-4xl font-normal tracking-wide uppercase leading-relaxed mb-6">
                 Projects
               </h2>
-              
+
               {/* Decorative line */}
               <div className="w-16 h-0.5 bg-sugar-orange mb-8"></div>
             </div>
@@ -104,7 +73,7 @@ const Projects: React.FC<ProjectsProps> = ({ onNavigateToProjects }) => {
             <div className="lg:w-2/3 max-w-6xl">
               {/* Large cre8tive text */}
               <div className="mb-16">
-                <h3 
+                <h3
                   className="text-white font-poppins font-bold uppercase leading-tight mb-16"
                   style={{
                     fontSize: 'clamp(80px, 12vw, 180px)',
@@ -124,7 +93,7 @@ const Projects: React.FC<ProjectsProps> = ({ onNavigateToProjects }) => {
                   <div key={index} className="flex flex-col items-center gap-6 group cursor-pointer hover:scale-105 transition-transform duration-300">
                     {/* Project Image */}
                     <div className="relative overflow-hidden rounded-lg shadow-2xl w-full">
-                      <img 
+                      <img
                         src={project.image}
                         alt={project.title}
                         className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -139,7 +108,7 @@ const Projects: React.FC<ProjectsProps> = ({ onNavigateToProjects }) => {
                       <h4 className="text-white font-poppins text-xl md:text-2xl font-normal tracking-wide capitalize leading-relaxed text-center">
                         {project.title}
                       </h4>
-                      
+
                       {/* Category Tag */}
                       <div className="flex items-center gap-3">
                         <div className="w-1.5 h-1.5 bg-sugar-orange rounded-full"></div>
